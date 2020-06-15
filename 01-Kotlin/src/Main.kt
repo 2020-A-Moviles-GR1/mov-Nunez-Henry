@@ -1,5 +1,7 @@
+import java.util.function.Consumer
+
 fun main(args:Array<String>){
-    print("Hola")
+    /*print("Hola")
    //Int edad = 31; en java
     //Mutables
     var edadProfesor = 31//no especificamos el tipo de dato
@@ -19,11 +21,11 @@ fun main(args:Array<String>){
     val apellidosProfesor = 'a'
     val fechaNacimiento = Date() //new Date();
 
-    if(sueldo==12.20){
-        else{
+    //if(sueldo==12.20){
+     //   else{
 
-        }
-    }
+     //   }
+    //}
     //when es como el switch en kotlin ya que este no existe
     when(sueldo){
         12.20 -> print("Sueldo normal")
@@ -39,7 +41,23 @@ fun main(args:Array<String>){
 
     calcularSueldo(sueldo: 700.00)
     calcularSueldo(650)
-    )
+*/
+    val arregloConstante: Array<Int> = arrayOf(1,2,3)
+    val arregloCumpleanos: ArrayList<Int> = arrayListOf(30,31,22,23,20)
+    arregloCumpleanos.add(24)
+    print(arregloCumpleanos)
+    arregloCumpleanos.remove(30)
+    print(arregloCumpleanos)
+
+    arregloCumpleanos.forEach{Int
+    print("Valor de la iteracion"+ it)}
+
+    arregloCumpleanos.forEach(Consumer { valorIteracion: Int?->
+        println("Valor iteracion: "+ valorIteracion)
+    })
+    arregloCumpleanos.forEach({valorIteracion: Int ->
+    println("Valor iteracion: "+valorIteracion)})
+
 
 
 
@@ -60,3 +78,4 @@ fun calcularSueldo(sueldo: Double, tasa: Double= 12.00
 fun imprimirMensaje():Unit{ //Unit=Void
     println("")
 }
+
