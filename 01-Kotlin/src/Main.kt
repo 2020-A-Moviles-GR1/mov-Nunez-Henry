@@ -58,6 +58,67 @@ fun main(args:Array<String>){
     arregloCumpleanos.forEach({valorIteracion: Int ->
     println("Valor iteracion: "+valorIteracion)})
 
+    //Operadores->Todos los lenguajes
+
+    //forEach no devuelve nada->Unit
+    arregloCumpleanos
+            .forEach {
+                println("Valor de la iteracion " + it)
+            }
+
+    arregloCumpleanos
+            .forEachIndexed { index:Int, it:Int ->
+                println("Valor de la iteracion " + it)
+            }
+    val respuestArregloForEach=arregloCumpleanos
+            .forEachIndexed { index:Int, iteraccion:Int ->
+                println("Valor de la iteracion " + iteraccion)
+            }
+    println(respuestArregloForEach)
+
+    //MAP-> Muta el arreglo (cambia el arreglo)
+    /*arregloCumpleanos.map { iteracion: Int ->
+        val nuevoValor=iteracion*-1
+        return nuevoValor
+    }
+*/
+    //enviemos el nuvo valor de la itracion
+    //nos devuelve es un nuevo arreglo con los valores modificados
+    val respuestaMap=arregloCumpleanos.map{
+        iterator:Int ->
+        iterator*-1
+
+    }
+
+    val respuestaMapDos=arregloCumpleanos.map{
+        iterator:Int ->
+        val nuevoValor=iterator*-1
+        val otroValor=nuevoValor *2
+        return@map otroValor
+
+    }
+
+    println(respuestaMap)
+    println(respuestaMapDos)
+    println(arregloCumpleanos)
+
+    //filter =filtra el arreglo
+    
+    val respuestaFilter: List<int>=arregloCumpleanos.filter {
+        iteracion: Int ->
+        val esMayorA23:Boolean=iteracion>23
+        return @filter esMayor
+
+    }
+    arregloCumpleanos.filter { iteracion:Int->iteracion>23 }
+    println(respuestaFilter)
+    println(arregloCumpleanos
+    )
+
+
+
+
+
 
 
 
