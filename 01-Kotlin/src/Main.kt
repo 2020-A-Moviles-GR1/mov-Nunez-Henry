@@ -5,15 +5,22 @@ fun main(args:Array<String>) {
 }
 public class Pacientes(
         var Nombre:String,
-        var Edad:Int
+        var Edad:Int,
+        var Apellido:String
+        //var Telefono:String,
+        //var TipoSangre:String
+
 )
 
 fun ingresar(pacientes: ArrayList<Pacientes>) {
     print("Ingrese nombre del paciente: ")
     val nombre = readLine().toString()
-    print("Ingrese la edad del paciente")
+    print("Ingrese napellido del paciente: ")
+    val apellido = readLine().toString()
+    print("Ingrese la edad del paciente: ")
     val edad = readLine().toString().toInt()
-    pacientes.add(Pacientes(nombre, edad))
+
+    pacientes.add(Pacientes(nombre, edad,apellido))
     mostrarMenu(pacientes)
 }
 
@@ -32,7 +39,7 @@ fun eliminar(pacientes: ArrayList<Pacientes>){
 
 fun imprimir(pacientes: ArrayList<Pacientes>){
     for(i in pacientes) {
-        println(i)
+        println(i.Nombre+"\n"+i.Edad)
     }
     mostrarMenu(pacientes)
 }
@@ -45,9 +52,11 @@ fun modificar(pacientes: ArrayList<Pacientes>){
     if(modificar){
         print("Ingrese el nombre del paciente")
         val nombre= readLine().toString()
+        print("Ingrese el apellido del paciente")
+        val apellido= readLine().toString()
         print("Ingrese la edad a modificar: ")
         val edad = readLine().toString().toInt()
-        pacientes.add(Pacientes(nombre,edad))
+        pacientes.add(Pacientes(nombre,edad,apellido))
     }else{
         print("El paciente no existe")
     }
@@ -57,7 +66,7 @@ fun modificar(pacientes: ArrayList<Pacientes>){
 
 fun mostrarMenu(pacientes:ArrayList<Pacientes>) {
     var menu:String
-    menu="           HOSPITAL DEL SUR         "+"\n"+
+    menu="\n"+"           HOSPITAL DEL SUR         "+"\n"+
             "1.Ingresar al paciente"+"\n"+
             "2.Imprimir pacientes"+"\n"+
             "3.Modificar pacientes"+"\n"+
