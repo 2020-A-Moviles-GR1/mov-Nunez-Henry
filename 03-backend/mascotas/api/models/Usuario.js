@@ -40,7 +40,3 @@ module.exports = {
     }
   },
 };
-
-// BDD
-// APP
-// Movil

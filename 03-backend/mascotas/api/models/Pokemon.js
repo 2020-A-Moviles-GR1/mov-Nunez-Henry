@@ -15,6 +15,11 @@ module.exports = {
     usuario: { // Many to One (nombre FK) - mismo nombre q la relacion
       model: 'usuario',
       required: true // (Es opcional 1 muchos 0 muchos)
+    },
+    batalla: { // One to Many (plural)
+      model: 'batalla', // Referencia al modelo
     }
+
   },
+
 };
