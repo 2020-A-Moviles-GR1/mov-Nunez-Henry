@@ -6,20 +6,17 @@
  */
 
 module.exports = {
-
   attributes: {
-
-    nombre:{
+    nombre: {
       type: 'string'
     },
-    usuario: { // Many to One (nombre FK) - mismo nombre q la relacion
-      model: 'usuario',
-      required: true // (Es opcional 1 muchos 0 muchos)
+    usuario: {
+      model: 'usuario'
     },
-    batalla: { // One to Many (plural)
-      model: 'batalla', // Referencia al modelo
+    batalla: {
+      model: 'batalla'
     }
-
   },
-
+  tableName: 'pokemon',
 };
+

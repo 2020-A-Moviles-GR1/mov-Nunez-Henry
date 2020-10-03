@@ -6,57 +6,93 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplicaciones Moviles !!!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
+
     <Button
         android:id="@+id/btn_ciclo_vida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="Ciclo Vida"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="84dp"
+        android:text="Ciclo de Vida"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_list_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:text="List View"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_ciclo_vida"
-        app:layout_constraintEnd_toStartOf="@+id/btn_ciclo_vida"
-        app:layout_constraintTop_toTopOf="@+id/btn_ciclo_vida"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_width="109dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:text="List view"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ciclo_vida"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_ciclo_vida"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ciclo_vida" />
 
     <Button
         android:id="@+id/btn_intent_respuesta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:text="Int Respuesta"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_ciclo_vida"
-        app:layout_constraintStart_toEndOf="@+id/btn_ciclo_vida"
-        app:layout_constraintTop_toTopOf="@+id/btn_ciclo_vida"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginTop="20dp"
+        android:text="Intent con respuesta"
+        app:layout_constraintEnd_toEndOf="@+id/btn_list_view"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="@+id/btn_list_view"
+        app:layout_constraintTop_toBottomOf="@+id/btn_list_view" />
 
     <Button
         android:id="@+id/btn_intent_implicito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="I. Implicito"
+        android:layout_marginTop="24dp"
+        android:text="Intent implicito"
         app:layout_constraintEnd_toEndOf="@+id/btn_intent_respuesta"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="@+id/btn_intent_respuesta"
         app:layout_constraintTop_toBottomOf="@+id/btn_intent_respuesta" />
 
     <Button
-        android:id="@+id/btn_resp_propia"
+        android:id="@+id/btn_respuesta_propia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Resp Propia"
+        android:layout_marginTop="28dp"
+        android:text="respuesta propia"
         app:layout_constraintEnd_toEndOf="@+id/btn_intent_implicito"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="@+id/btn_intent_implicito"
         app:layout_constraintTop_toBottomOf="@+id/btn_intent_implicito" />
+
+    <Button
+        android:id="@+id/btn_http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="HTTP"
+        app:layout_constraintEnd_toEndOf="@+id/btn_respuesta_propia"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/btn_respuesta_propia"
+        app:layout_constraintTop_toBottomOf="@+id/btn_respuesta_propia" />
+
+    <Button
+        android:id="@+id/btn_recylcer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="RECYCLER"
+        app:layout_constraintEnd_toEndOf="@+id/btn_http"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_http"
+        app:layout_constraintTop_toBottomOf="@+id/btn_http" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

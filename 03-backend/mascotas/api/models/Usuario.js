@@ -6,37 +6,41 @@
  */
 
 module.exports = {
-  tableName: 'epn_usuario',
   attributes: {
-    cedula:{ // nombre atributo
+    cedula: {
       type: 'string',
-      required: true, // Por defecto es false
-      columnName: 'epn_cedula',
-      unique: true, // Por defecto es false
+      required: true,
+      allowNull: false,
+      columnName: 'usuario_cedula',
+      unique: true,
       minLength: 10,
-      maxLength: 25
+      maxLength: 25,
     },
-    nombre:{
+    nombre: {
       type: 'string',
       minLength: 3,
-      required: true, // Por defecto es false
+      maxLength: 60,
+      required: true,
+      unique: true
     },
-    correo:{
+    correo: {
       type: 'string',
-      isEmail: true // Por defecto es false
+      isEmail: true
     },
-    estadoCivil:{
+    estadoCivil: {
       type: 'string',
-      isIn: ['Soltero', 'Casado', 'Divorciado', 'Viudo', 'Unión libre'], // Solo estos valores
-      defaultsTo: 'Soltero' // Valor por defecto
+      isIn: ['soltero', 'casado', 'divorciado', 'viudo', 'union libre'],
+      defaultsTo: 'soltero'
     },
-    password:{
+    password: {
       type: 'string',
-      regex:  /^[a-zA-Z]\w{3,14}$/
+      regex: /^[A-z0-9 ]*$/i
     },
-    pokemons: { // One to Many (plural)
-      collection: 'pokemon', // Referencia al modelo
-      via: 'usuario' // Nombre Foreign Key en 'Pokemon'
+    pokemons: {
+      collection: 'pokemon',
+      via: 'usuario'
     }
   },
+  tableName: 'usuario',
 };
+

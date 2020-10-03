@@ -8,13 +8,14 @@
 module.exports = {
 
   attributes: {
-    nombre:{
+    descripcion: {
       type: 'string'
     },
     pokemons: {
       collection: 'pokemon',
       via: 'batalla'
-    },
+    }
   },
+  tableName: 'batalla',
 };
 
